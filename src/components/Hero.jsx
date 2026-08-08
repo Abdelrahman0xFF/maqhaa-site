@@ -47,7 +47,9 @@ export function Hero() {
 
       <Container className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
-          <Badge>مقهي | Maqhaa</Badge>
+          <Badge>
+            مقهى <span className="text-primary">| Maqhaa</span>
+          </Badge>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             <span className="block">اجعل عملك أسهل</span>
             <span className="text-primary block">مع مقهي</span>
