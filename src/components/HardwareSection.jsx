@@ -7,7 +7,7 @@ import {
   MousePointerClick,
 } from "lucide-react";
 
-const OS = ["Windows", "macOS", "Linux"];
+const OS = ["Windows"];
 
 const HARDWARE = [
   { icon: Printer, title: "طابعات حرارية", desc: "طباعة فواتير 80 مم." },

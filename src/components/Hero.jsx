@@ -47,16 +47,15 @@ export function Hero() {
 
       <Container className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
+          <Badge>مقهي | Maqhaa</Badge>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            اجعل عملك أسهل
-            <span className="text-primary">إدارة وكاشير بسيط</span>
+            <span className="block">اجعل عملك أسهل</span>
+            <span className="text-primary block">مع مقهي</span>
           </h1>
-
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            يعمل بدون إنترنت ولا يحتاج اشتراكات، جهازك مباشرةً - سجّل الطلبات،
-            إدارة الطاولات والمخزون، وطباعة الفواتير بسهولة وسرعة.
+            يعمل بدون إنترنت وبدون اشتراكات. أدر طلباتك وطاولاتك ومخزونك، واطبع
+            الفواتير بسهولة وسرعة، كل ذلك من جهازك مباشرةً.
           </p>
-
           <div className="flex flex-wrap gap-2">
             {PILLS.map((p) => (
               <span
@@ -68,7 +67,6 @@ export function Hero() {
               </span>
             ))}
           </div>
-
           <div className="flex flex-wrap items-center gap-3">
             <Button onClick={() => openOrder()} className="gap-2">
               اطلب الآن
