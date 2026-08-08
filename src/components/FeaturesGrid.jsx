@@ -55,7 +55,7 @@ const FEATURES = [
 
 export function FeaturesGrid() {
   return (
-    <section id="features" className="bg-muted/40 py-20">
+    <section id="features" aria-label="ميزات النظام" className="bg-muted/40 py-20">
       <Container>
         <SectionHeading
           eyebrow="المميزات"

@@ -70,7 +70,7 @@ export function Pricing() {
   const { openOrder } = useOrder();
 
   return (
-    <section id="pricing" className="relative overflow-hidden py-24">
+    <section id="pricing" aria-label="خطط الأسعار" className="relative overflow-hidden py-24">
       <Container>
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">

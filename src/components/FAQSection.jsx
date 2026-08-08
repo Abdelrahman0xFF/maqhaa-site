@@ -36,7 +36,7 @@ export function FAQSection() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section id="faq" className="py-20">
+    <section id="faq" aria-label="الأسئلة الشائعة" className="py-20">
       <Container className="max-w-3xl">
         <SectionHeading eyebrow="الأسئلة الشائعة" title="كل ما تريد معرفته" />
         <div className="flex flex-col gap-3">

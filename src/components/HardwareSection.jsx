@@ -22,7 +22,7 @@ const HARDWARE = [
 
 export function HardwareSection() {
   return (
-    <section className="bg-muted/40 py-20">
+    <section id="hardware" aria-label="مواصفات الأجهزة" className="bg-muted/40 py-20">
       <Container>
         <SectionHeading
           eyebrow="التوافق"

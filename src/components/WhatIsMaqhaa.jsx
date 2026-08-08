@@ -43,7 +43,7 @@ const KSP = [
 
 export function WhatIsMaqhaa() {
   return (
-    <section id="what" className="bg-muted/40 py-20">
+    <section id="what" aria-label="ما هو مقهى" className="bg-muted/40 py-20">
       <Container>
         <SectionHeading
           eyebrow="ما هو مقهى؟"

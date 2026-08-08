@@ -51,12 +51,10 @@ export function Hero() {
             مقهى <span className="text-primary">| Maqhaa</span>
           </Badge>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="block">اجعل عملك أسهل</span>
-            <span className="text-primary block">مع مقهي</span>
+            نظام كاشير وإدارة المقاهي
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            يعمل بدون إنترنت وبدون اشتراكات. أدر طلباتك وطاولاتك ومخزونك، واطبع
-            الفواتير بسهولة وسرعة، كل ذلك من جهازك مباشرةً.
+            نظام كاشير سريع وبسيط لإدارة المقاهي بدون إنترنت أو اشتراكات. يدعم المبيعات، الطاولات، المخزون، الفواتير، والورديات بكل سهولة.
           </p>
           <div className="flex flex-wrap gap-2">
             {PILLS.map((p) => (

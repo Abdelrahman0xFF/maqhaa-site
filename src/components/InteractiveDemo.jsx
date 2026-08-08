@@ -258,7 +258,7 @@ function ThermalReceipt({ z = false }) {
           className="mb-2 h-28 w-44 object-contain"
           style={{ width: "180px", height: "90px" }}
         />
-        <h1 className="text-4xl font-black mb-2">مقهي</h1>
+        <h2 className="text-4xl font-black mb-2">مقهي</h2>
         {!z && (
           <p className="text-xl text-center font-bold mb-2">أهلاً وسهلاً</p>
         )}

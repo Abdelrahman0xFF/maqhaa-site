@@ -14,7 +14,7 @@ export function CtaSection() {
   const { openOrder } = useOrder();
 
   return (
-    <section className="py-20">
+    <section id="cta" aria-label="دعوة لاتخاذ إجراء" className="py-20">
       <Container>
         <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 px-6 py-14 text-center shadow-sm sm:px-12">
           {GLOWS.map((position) => (
