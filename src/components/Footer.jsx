@@ -20,21 +20,21 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              نظام كاشير وإدارة كافيهات ومطاعم أوفلاين 100% بدون اشتراكات شهرية.
+              نظام كاشير بسيط وإدارة مقهى يعمل بدون إنترنت ولا تحتاج اشتراكات.
             </p>
           </div>
 
           <div>
-            <h4 className="mb-3 font-extrabold">روابط سريعة</h4>
+            <h4 className="mb-3 font-extrabold">روابط</h4>
             <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
               <li>
                 <a href="#what" className="hover:text-foreground">
-                  ما هو مقهى
+                  عن المقهي
                 </a>
               </li>
               <li>
                 <a href="#demo" className="hover:text-foreground">
-                  التجرُبة التفاعلية
+                  تجربة
                 </a>
               </li>
               <li>
@@ -44,14 +44,14 @@ export function Footer() {
               </li>
               <li>
                 <a href="#pricing" className="hover:text-foreground">
-                  الباقات
+                  الخطط
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-3 font-extrabold">تواصل معنا</h4>
+            <h4 className="mb-3 font-extrabold">اتصل بنا</h4>
             <a
               href={whatsapp}
               target="_blank"
@@ -59,7 +59,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground shadow-sm shadow-primary/20 hover:bg-primary/90"
             >
               <MessageCircle className="h-4 w-4" />
-              واتساب
+              WhatsApp
             </a>
           </div>
         </div>

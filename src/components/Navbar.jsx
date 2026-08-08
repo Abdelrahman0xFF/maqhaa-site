@@ -6,10 +6,10 @@ import { useOrder } from "./OrderProvider";
 import { Container } from "./ui";
 
 const LINKS = [
-  { href: "#what", label: "ما هو مقهى" },
-  { href: "#demo", label: "التجرُبة" },
+  { href: "#what", label: "عن مقهى" },
+  { href: "#demo", label: "تجربة" },
   { href: "#features", label: "المميزات" },
-  { href: "#pricing", label: "الباقات" },
+  { href: "#pricing", label: "الخطط" },
   { href: "#faq", label: "الأسئلة" },
 ];
 
@@ -53,7 +53,7 @@ export function Navbar() {
             className="inline-flex items-center gap-2 rounded-lg border border-border px-3.5 py-2.5 text-sm font-bold text-foreground hover:bg-accent"
           >
             <MessageCircle className="h-4 w-4 text-primary" />
-            تواصل
+            تواصل معنا
           </a>
           <button
             onClick={() => openOrder()}

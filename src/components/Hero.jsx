@@ -3,7 +3,6 @@
 import {
   Zap,
   Coins,
-  Printer,
   ShieldCheck,
   Play,
   ArrowLeft,
@@ -16,9 +15,9 @@ import { useOrder } from "./OrderProvider";
 import { Container, Badge, Button } from "./ui";
 
 const PILLS = [
-  { icon: Zap, label: "أوفلاين 100%" },
-  { icon: Coins, label: "بدون اشتراك شهري" },
-  { icon: Printer, label: "طباعة حرارية ذكية" },
+  { icon: Zap, label: "بدون إنترنت" },
+  { icon: Coins, label: "بدون اشتراك" },
+  { icon: ShieldCheck, label: "أمان عالي" },
 ];
 
 const MOCK_MENU = [
@@ -49,14 +48,13 @@ export function Hero() {
       <Container className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            ضع بصمتك في نظام
-            <span className="text-primary">ادارة وكاشير مميز</span>
+            اجعل عملك أسهل
+            <span className="text-primary">إدارة وكاشير بسيط</span>
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            يعمل <strong className="text-foreground">100% أوفلاين</strong> على
-            جهازك بدون إنترنت وبدون أي اشتراكات شهرية - سجّل الطلبات، أدرِ
-            الطاولات والمخزون، واطبع الفواتير حرارياً بسرعة ورقابة كاملة.
+            يعمل بدون إنترنت ولا يحتاج اشتراكات، جهازك مباشرةً - سجّل الطلبات،
+            إدارة الطاولات والمخزون، وطباعة الفواتير بسهولة وسرعة.
           </p>
 
           <div className="flex flex-wrap gap-2">
@@ -73,13 +71,13 @@ export function Hero() {
 
           <div className="flex flex-wrap items-center gap-3">
             <Button onClick={() => openOrder()} className="gap-2">
-              اطلب باقتك
+              اطلب الآن
               <ArrowLeft className="h-5 w-5" />
             </Button>
             <a href="#demo">
               <Button variant="outline" className="gap-2">
                 <Play className="h-5 w-5 text-primary" />
-                جرّب الشاشة التفاعلية
+                جرّب الآن
               </Button>
             </a>
           </div>
@@ -164,7 +162,7 @@ export function Hero() {
                 <div className="flex items-center justify-between border-b border-border/50 bg-muted/10 px-3 py-2">
                   <h3 className="flex items-center gap-1.5 text-sm font-bold text-foreground">
                     <ShoppingBag className="h-4 w-4 text-primary" />
-                    فاتورة الطلب
+                    الفاتورة
                   </h3>
                 </div>
                 <div className="space-y-1.5 p-2">
@@ -218,7 +216,7 @@ export function Hero() {
                 </div>
                 <div className="p-2">
                   <div className="w-full rounded-lg bg-primary py-2 text-center text-sm font-bold text-primary-foreground">
-                    تأكيد الدفع
+                    ادفع الآن
                   </div>
                 </div>
               </div>

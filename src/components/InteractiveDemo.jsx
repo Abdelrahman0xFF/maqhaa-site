@@ -598,7 +598,7 @@ export function InteractiveDemo() {
             <div className="border-b border-border px-5 py-4 shrink-0">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold text-foreground">
-                  اختر طاولة أو اطلب تيك اواي
+                  اختر طاولة أو طلب سريع
                 </h2>
                 <button
                   onClick={() => {
@@ -608,7 +608,7 @@ export function InteractiveDemo() {
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-bold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all active:scale-95"
                 >
                   <ShoppingBag className="w-5 h-5" />
-                  تيك اواي
+                  طلب سريع
                 </button>
               </div>
             </div>
@@ -703,7 +703,7 @@ export function InteractiveDemo() {
                 ) : (
                   <div className="h-full flex flex-col items-center justify-center text-muted-foreground">
                     <Search className="w-12 h-12 mb-4 opacity-20" />
-                    <p>لا توجد منتجات مطابقة للبحث</p>
+                    <p>لا توجد منتجات</p>
                   </div>
                 )}
               </main>
@@ -729,7 +729,7 @@ export function InteractiveDemo() {
                       onClick={() => setCart([])}
                       className="text-sm text-destructive hover:underline font-medium"
                     >
-                      إفراغ
+                      مسح السلة
                     </button>
                   )}
                 </div>
@@ -773,7 +773,7 @@ export function InteractiveDemo() {
               <div className="flex-1 overflow-y-auto min-h-0">
                 {cart.length === 0 && (
                   <div className="p-8 text-center text-sm text-muted-foreground">
-                    لا توجد أصناف في الطلب بعد
+                    السلة فارغة
                   </div>
                 )}
                 {cart.map((c) => (

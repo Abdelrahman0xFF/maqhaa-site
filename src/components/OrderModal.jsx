@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { X, MessageCircle, Package, User, Phone, MapPin } from "lucide-react";
 
 const PACKAGES = {
-  standard: "باقة مقهى Standard (النظام الأساسي)",
-  premium: "باقة مقهى Premium (النظام الكامل)",
+  standard: "الباقة الأساسية",
+  premium: "الـ باقة الكاملة",
 };
 
 // ⚠️ استبدل برقم الواتساب الخاص بك بصيغة دولية بدون + أو أصفار البداية
@@ -50,7 +50,7 @@ export function OrderModal({ pkg, onClose }) {
         <div className="mb-4 flex items-center justify-between">
           <h3 className="flex items-center gap-2 text-xl font-extrabold">
             <Package className="h-5 w-5 text-primary" />
-            اطلب باقتك
+            اختر باقتك
           </h3>
           <button
             onClick={onClose}
@@ -69,8 +69,8 @@ export function OrderModal({ pkg, onClose }) {
               onChange={(e) => setPackageName(e.target.value)}
               className="rounded-lg border border-input bg-background px-3 py-2.5 font-medium focus:outline-none focus:ring-2 focus:ring-ring"
             >
-              <option value="standard">باقة مقهى Standard</option>
-              <option value="premium">باقة مقهى Premium</option>
+              <option value="standard">الباقة الأساسية</option>
+              <option value="premium">الـ باقة الكاملة</option>
             </select>
           </label>
 
@@ -82,7 +82,7 @@ export function OrderModal({ pkg, onClose }) {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="اسمك / اسم الكافيه"
+              placeholder="اسمك"
               className="rounded-lg border border-input bg-background px-3 py-2.5 font-medium focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </label>
@@ -96,7 +96,7 @@ export function OrderModal({ pkg, onClose }) {
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="01xxxxxxxxx"
+              placeholder="رقم هاتفك"
               className="rounded-lg border border-input bg-background px-3 py-2.5 font-medium focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </label>
@@ -118,7 +118,7 @@ export function OrderModal({ pkg, onClose }) {
             className="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-base font-bold text-primary-foreground shadow-sm shadow-primary/20 hover:bg-primary/90"
           >
             <MessageCircle className="h-5 w-5" />
-            إرسال عبر واتساب
+            أرسل عبر واتساب
           </button>
         </form>
       </div>

@@ -15,17 +15,16 @@ export function CtaSection() {
           <div className="pointer-events-none absolute -bottom-24 -inset-e-10 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
           <div className="relative">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
-              ابدأ إدارة كافيهك باحترافية اليوم
+               نظام شامل لإدارة الكافيه
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-white/80">
-              امتلك نظام مقهى أوفلاين مدى الحياة - بدون اشتراكات، مع دعم كامل
-              للطباعة والمخزون والتقارير. اختر باقتك الآن.
+               احصل على نظام الكافيه كامل بلا اشتراكات، يدعم الطباعة وإدارة المخزون. اختر الباقة الآن.
             </p>
             <button
               onClick={() => openOrder()}
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-extrabold text-primary-foreground shadow-lg shadow-primary/30 hover:bg-primary/90"
             >
-              اطلب باقتك الآن
+               احصل على الباقة الآن
               <ArrowLeft className="h-5 w-5" />
             </button>
           </div>
