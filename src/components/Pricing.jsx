@@ -10,10 +10,10 @@ const PACKAGES = [
     id: "standard",
     icon: Coffee,
     name: "الباقة الأساسية",
-    tagline: "كل ما تحتاجه لإدارة مقهاك",
     note: "نظام كاشير بسيط وسريع، مصمم للمقاهي الصغيرة والمتوسطة.",
     cta: "ابدأ الآن",
     highlight: false,
+    price: "6000",
     features: [
       "شاشة بيع بسيطة مع بحث بالباركود",
       "إضافات مثل السكر والحليب",
@@ -33,10 +33,10 @@ const PACKAGES = [
     id: "premium",
     icon: Rocket,
     name: "الباقة المتكاملة",
-    tagline: "حل متكامل للمقاهي والمطاعم",
     note: "كل ما في الباقة الأساسية، بالإضافة إلى إدارة المخزون والموردين.",
     cta: "ابدأ الآن",
     highlight: true,
+    price: "18000",
     features: [
       "كل ميزات الباقة الأساسية",
       "مخزون بالوحدات (جرام، مل)",
@@ -156,9 +156,19 @@ export function Pricing() {
                   </p>
                 </div>
 
-                {/* Divider */}
-                <div className="my-6 h-px bg-border/70" />
-
+                <div className="my-6">
+                  <p className="mb-1 text-sm font-semibold text-muted-foreground">
+                    تبدأ من
+                  </p>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-black tracking-tight">
+                      {p.price}
+                    </span>
+                    <span className="text-sm font-bold text-muted-foreground">
+                      جنيه مصري
+                    </span>
+                  </div>
+                </div>
                 {/* Features */}
                 <ul className="relative flex-1 space-y-3">
                   {p.features.map((feature, i) => {
