@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Container, SectionHeading } from "./ui";
 import { cn } from "./cn";
+import { MacWindow } from "./MacWindow";
 
 const CURRENCY = "ج.م";
 
@@ -246,7 +247,7 @@ function ThermalReceipt({ z = false }) {
     <div
       dir="rtl"
       style={{ fontFamily: "'Cairo', sans-serif" }}
-      className="w-full max-w-[440px] bg-white text-black p-7 font-bold rounded-sm"
+      className="w-full max-w-110 bg-white text-black p-7 font-bold rounded-sm"
     >
       {/* header */}
       <div className="flex flex-col items-center justify-center mb-6 pb-2 gap-2 text-center">
@@ -263,12 +264,12 @@ function ThermalReceipt({ z = false }) {
         )}
         <div className="flex gap-4 mt-1">
           <p className="text-lg text-center" dir="ltr">
-            01000000000
+            01123593773
           </p>
           <p className="text-lg text-center">شارع النصر، القاهرة</p>
         </div>
         <p className="text-lg text-center mt-2">
-          الرقم الضريبي: <span dir="ltr">345-678-901</span>
+          الرقم الضريبي: <span dir="ltr">123-456-789</span>
         </p>
         {!z && (
           <div className="flex flex-col gap-1 text-xl text-left">
@@ -592,8 +593,9 @@ export function InteractiveDemo() {
           </div>
         ) : view === "home" ? (
           /* ---- Real HOME view: Takeaway button + TablesGrid ---- */
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-border bg-background shadow-xl">
-            <div className="border-b border-border bg-card px-5 py-4 shrink-0">
+
+          <MacWindow>
+            <div className="border-b border-border px-5 py-4 shrink-0">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold text-foreground">
                   اختر طاولة أو اطلب تيك اواي
@@ -610,7 +612,6 @@ export function InteractiveDemo() {
                 </button>
               </div>
             </div>
-
             <div className="p-5">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {tables.map((table) => (
@@ -652,9 +653,9 @@ export function InteractiveDemo() {
                 ))}
               </div>
             </div>
-          </div>
+          </MacWindow>
         ) : (
-          <div className="mx-auto max-w-6xl overflow-hidden rounded-2xl border border-border bg-background shadow-xl flex flex-col md:flex-row md:h-[620px]">
+          <MacWindow className="mx-auto max-w-6xl bg-background shadow-xl flex flex-col md:flex-row md:h-155">
             <div className="flex-1 flex flex-col min-w-0">
               <header className="flex flex-col gap-5 mb-4 shrink-0 p-5 pb-0">
                 <div className="flex items-center justify-between gap-3">
@@ -672,7 +673,7 @@ export function InteractiveDemo() {
                   <div className="relative w-72 max-w-full">
                     <input
                       type="text"
-                      placeholder="ابحث عن منتج... (مسح الباركود)"
+                      placeholder="ابحث عن منتج..."
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
                       className="w-full pl-10 pr-4 py-2.5 bg-card border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow text-right"
@@ -709,7 +710,7 @@ export function InteractiveDemo() {
             </div>
 
             {/* Real Cart sidebar */}
-            <div className="md:w-[360px] bg-card border-t md:border-t-0 md:border-r border-border md:h-full flex flex-col shadow-sm z-10 shrink-0 min-h-0">
+            <div className="md:w-90 bg-card border-t md:border-t-0 md:border-r border-border md:h-full flex flex-col shadow-sm z-10 shrink-0 min-h-0">
               <div className="p-5 border-b border-border/50 flex justify-between items-center bg-muted/10">
                 <div className="flex items-center gap-3">
                   <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
@@ -941,7 +942,7 @@ export function InteractiveDemo() {
                 </button>
               </div>
             </div>
-          </div>
+          </MacWindow>
         )}
 
         {/* Real ModifierModal (replicates app) */}
