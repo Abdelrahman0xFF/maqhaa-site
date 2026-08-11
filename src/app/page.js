@@ -12,13 +12,13 @@ import { CtaSection } from "../components/CtaSection";
 import { Footer } from "../components/Footer";
 
 export const metadata = {
-  title: "مقهي - كاشير وإدارة الكافيه",
+  title: "مقهي - كاشير وادارة الكافيه",
   description:
-    "احصل على نظام كافيه كامل بلا اشتراكات، يدعم الطباعة وإدارة المخزون، مع باقات مرنة تناسب جميع أنواع المقاهي.",
+    "احصل على نظام كافيه كامل بلا اشتراكات، يدعم الطباعة وادارة المخزون، مع باقات مرنة تناسب جميع أنواع المقاهي.",
   openGraph: {
-    title: "مقهي - إدارة الكافيه بسهولة",
+    title: "مقهي - ادارة الكافيه بسهولة",
     description:
-      "نظام كافيه متكامل لإدارة المبيعات، الطاولات، المخزون، وتوليد الفواتير، بدون اشتراكات.",
+      "نظام كافيه متكامل لادارة المبيعات، الطاولات، المخزون، وتوليد الفواتير، بدون اشتراكات.",
     url: "https://maqhaa.abdelrahmanashraf.dev",
     siteName: "مقهي",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -27,21 +27,23 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "مقهي - نظام إدارة الكافيه",
-    description: "نظام كافيه شامل بدون اشتراكات، يدعم الطباعة وإدارة المخزون.",
+    title: "مقهي - نظام ادارة الكافيه",
+    description: "نظام كافيه شامل بدون اشتراكات، يدعم الطباعة وادارة المخزون.",
     images: ["/og-image.png"],
   },
 };
+
+import { ScrollReveal } from "../components/ScrollReveal";
 
 export default function Home() {
   return (
     <OrderProvider>
       <Head>
-        <meta
+        <metaادارةادارة
           name="keywords"
           content="cashier, كاشير, point of sale, POS, مقهى, كافيه, إدارة الكافيه, إدارة المخزون, طباعة الفواتير, نظام كاشير"
         />
-        <meta
+        <metaادارةادارة
           name="description"
           content="نظام شامل لإدارة الكافيه والكاشير بدون اشتراكات، يدعم الطباعة وإدارة المخزون والطلبات."
         />
@@ -64,13 +66,27 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <WhatIsMaqhaa />
-        <InteractiveDemo />
-        <FeaturesGrid />
-        <Pricing />
-        <HardwareSection />
-        <FAQSection />
-        <CtaSection />
+        <ScrollReveal animation="fade-up">
+          <WhatIsMaqhaa />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <InteractiveDemo />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <FeaturesGrid />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <Pricing />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <HardwareSection />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <FAQSection />
+        </ScrollReveal>
+        <ScrollReveal animation="fade-up">
+          <CtaSection />
+        </ScrollReveal>
       </main>
       <Footer />
     </OrderProvider>

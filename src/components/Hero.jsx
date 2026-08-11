@@ -43,25 +43,15 @@ export function Hero() {
       id="top"
       className="relative min-h-[calc(100dvh-4rem)] overflow-hidden"
     >
-      {/* Subtle decorative gradients */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 inset-s-1/4 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute top-40 -inset-e-20 h-80 w-80 rounded-full bg-primary/5 blur-3xl" />
-      </div>
-
       <Container className="grid min-h-[calc(100dvh-4rem)] items-center gap-12 py-16 sm:py-24 lg:grid-cols-2">
         {/* Hero Content */}
         <div className="flex flex-col items-center gap-6 text-2xl text-center sm:text-right">
-          <Badge>
-            مقهى <span className="text-primary">| Maqhaa</span>
-          </Badge>
-
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            نظام كاشير وإداة للكافيهات
+            نظام كاشير وادارة للكافيهات
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            نظام كاشير سريع وبسيط لإدارة المقاهي بدون إنترنت أو اشتراكات. يدعم
+            نظام كاشير سريع وبسيط لادارة المقاهي بدون إنترنت أو اشتراكات. يدعم
             المبيعات، الطاولات، المخزون، الفواتير، والورديات بكل سهولة.
           </p>
 

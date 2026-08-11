@@ -18,7 +18,7 @@ export function Footer() {
             </a>
 
             <p className="mt-3 max-w-sm text-sm leading-7 text-muted-foreground">
-              نظام كاشير بسيط وإدارة مقهى يعمل بدون إنترنت، بدون تعقيد أو
+              نظام كاشير بسيط وادارة مقهى يعمل بدون إنترنت، بدون تعقيد أو
               اشتراكات شهرية.
             </p>
           </div>

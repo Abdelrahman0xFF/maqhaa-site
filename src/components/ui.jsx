@@ -4,18 +4,9 @@ export function Container({ className, children }) {
   return <div className={cn('mx-auto w-full max-w-6xl px-4 sm:px-6', className)}>{children}</div>
 }
 
-export function Eyebrow({ children }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-bold text-primary">
-      {children}
-    </span>
-  )
-}
-
-export function SectionHeading({ eyebrow, title, description, center = true }) {
+export function SectionHeading({ title, description, center = true }) {
   return (
     <div className={cn('mb-12 flex flex-col gap-3', center && 'items-center text-center')}>
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
       <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h2>
       {description && (
         <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">{description}</p>

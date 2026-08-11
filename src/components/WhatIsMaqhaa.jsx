@@ -46,26 +46,26 @@ export function WhatIsMaqhaa() {
     <section id="what" aria-label="ما هو مقهى" className="bg-muted/40 py-20">
       <Container>
         <SectionHeading
-          eyebrow="ما هو مقهى؟"
-          title="نظامك المتكامل لإدارة كافيهك ومطعمك"
-          description="مقهى هو نظام كاشير وإدارة كافيهات ومطاعم حديث، ومتكامل - مبنٍ بأحدث تقنيات الواجهات ليدير كل عملياتك: من تسجيل الطلبات وإدارة الطاولات، إلى طباعة الفواتير وإدارة المخزون والتقارير."
+          title="نظامك المتكامل لادارة كافيهك ومطعمك"
+          description="مقهى هو نظام كاشير وادارة كافيهات ومطاعم حديث، ومتكامل - مبنٍ بأحدث تقنيات الواجهات ليدير كل عملياتك: من تسجيل الطلبات وادارة الطاولات، إلى طباعة الفواتير وادارة المخزون والتقارير."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {KSP.map((k) => {
             const Icon = k.icon;
             return (
-              <div
-                key={k.title}
-                className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
-              >
-                <span className="mb-4 inline-flex rounded-xl border border-primary/20 bg-primary/10 p-3">
-                  <Icon className="h-6 w-6 text-primary" />
+              <div key={k.title} className="flex flex-col gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="h-6 w-6" />
                 </span>
-                <h3 className="mb-2 text-lg font-extrabold">{k.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {k.desc}
-                </p>
+                <div>
+                  <h3 className="mb-1 text-lg font-extrabold text-foreground">
+                    {k.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {k.desc}
+                  </p>
+                </div>
               </div>
             );
           })}

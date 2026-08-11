@@ -25,7 +25,7 @@ export function Navbar() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/icon.png"
-            alt="مقهى - نظام كاشير وإدارة المقاهي"
+            alt="مقهى - نظام كاشير وادارة المقاهي"
             className="h-10 w-10 rounded-xl object-contain"
           />
           <span className="text-lg font-extrabold tracking-tight">

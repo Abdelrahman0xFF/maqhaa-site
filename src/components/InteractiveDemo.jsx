@@ -191,7 +191,7 @@ function CategoryBar({ categories, activeCategoryId, onSelectCategory }) {
 /* ---- Real CartItem (replicates app) ---- */
 function CartItemComponent({ item, onUpdateQuantity, onRemove }) {
   return (
-    <div className="flex flex-col p-4 border-b border-border/50 bg-card hover:bg-accent/30 transition-colors">
+    <div className="flex flex-col p-4 border-b border-border/50 bg-card hover:bg-accent/30 transition-colors animate-in fade-in slide-in-from-right-4 duration-300">
       <div className="flex justify-between items-start mb-2">
         <div className="flex-1">
           <h4 className="font-semibold text-foreground text-[0.95rem]">
@@ -554,7 +554,6 @@ export function InteractiveDemo() {
     <section id="demo" className="py-20">
       <Container>
         <SectionHeading
-          eyebrow="جرّب مقهى"
           title="نفس واجهة مقهى الحقيقية"
           description="مكوّنات مأخوذة من التطبيق الفعلي: الصفحة الرئيسية ،شاشة الكاشير، إضافات المنتجات، والفواتير الحرارية - تفاعلية مباشرة أمامك."
         />
@@ -589,9 +588,13 @@ export function InteractiveDemo() {
         </div>
 
         {/* Receipt / Z-report preview */}
-        {isDocument ? (
-          <div className="mx-auto flex max-w-fit justify-center rounded-2xl border border-border bg-muted/40 p-6 sm:p-10 shadow-sm">
-            <ThermalReceipt z={view === "zreport"} />
+        <div key={view} className="animate-in fade-in slide-in-from-bottom-2 duration-300">
+          {isDocument ? (
+          <div className="mx-auto flex max-w-fit justify-center rounded-2xl border border-border bg-muted/40 p-6 sm:p-10 shadow-sm overflow-hidden relative">
+            <div className="absolute top-0 left-0 right-0 h-4 bg-muted-foreground/10 z-10 rounded-t-2xl shadow-inner" />
+            <div className="animate-print pt-2">
+              <ThermalReceipt z={view === "zreport"} />
+            </div>
           </div>
         ) : view === "home" ? (
           /* ---- Real HOME view: Takeaway button + TablesGrid ---- */
@@ -946,6 +949,7 @@ export function InteractiveDemo() {
             </div>
           </MacWindow>
         )}
+        </div>
 
         {/* Real ModifierModal (replicates app) */}
         {modItem && (
@@ -978,7 +982,7 @@ function ModifierModalView({ item, onClose, onConfirm }) {
       onClick={onClose}
     >
       <div
-        className="bg-card w-full max-w-lg rounded-2xl shadow-xl border border-border overflow-hidden flex flex-col"
+        className="bg-card w-full max-w-lg rounded-2xl shadow-xl border border-border overflow-hidden flex flex-col animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-6 border-b border-border flex items-center justify-between bg-muted/30">

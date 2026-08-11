@@ -20,9 +20,9 @@ const PACKAGES = [
       "خدمات داخلية وخارجية",
       "خصومات وضريبة مرنة",
       "الدفع نقدًا أو بالبطاقة",
-      "إدارة الطاولات",
+      "ادارة الطاولات",
       "طباعة الفواتير",
-      "إدارة الورديات والتقارير المالية",
+      "ادارة الورديات والتقارير المالية",
       "تقارير مالية",
       "تسجيل دخول وصلاحيات",
       "دعم عملات متعددة",
@@ -33,7 +33,7 @@ const PACKAGES = [
     id: "premium",
     icon: Rocket,
     name: "الباقة المتكاملة",
-    note: "كل ما في الباقة الأساسية، بالإضافة إلى إدارة المخزون والموردين.",
+    note: "كل ما في الباقة الأساسية، بالإضافة إلى ادارة المخزون والموردين.",
     cta: "ابدأ الآن",
     highlight: true,
     price: "18000",
@@ -43,7 +43,7 @@ const PACKAGES = [
       "خصم تلقائي من المخزون",
       "تنبيهات نفاد المخزون",
       "جرد المخزون",
-      "إدارة الموردين والطلبات",
+      "ادارة الموردين والطلبات",
       "تتبع التلف والهدر",
       "طباعة متعددة الأقسام",
       "تقارير المخزون والمشتريات",
@@ -54,7 +54,7 @@ const PACKAGES = [
 const COMPARISON = [
   ["شاشة الكاشير والبحث بالباركود", true, true],
   ["إضافات ومعدلات المنتجات", true, true],
-  ["إدارة الطاولات والخدمات المتعددة", true, true],
+  ["ادارة الطاولات والخدمات المتعددة", true, true],
   ["طباعة فواتير حرارية", true, true],
   ["الورديات ومطابقة الخزينة", true, true],
   ["تعدد العملات", true, true],
@@ -70,17 +70,17 @@ export function Pricing() {
   const { openOrder } = useOrder();
 
   return (
-    <section id="pricing" aria-label="خطط الأسعار" className="relative overflow-hidden py-24">
+    <section
+      id="pricing"
+      aria-label="خطط الأسعار"
+      className="relative overflow-hidden py-24"
+    >
       <Container>
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-bold text-primary">
-            اختر الباقة المناسبة لك
-          </div>
-
           <SectionHeading
-            title="كل ما تحتاجه لإدارة مقهاك"
-            description="حلول مرنة تساعدك على إدارة المبيعات والطلبات والمخزون بسهولة، بدون تعقيد."
+            title="كل ما تحتاجه لادارة مقهاك"
+            description="حلول مرنة تساعدك على ادارة المبيعات والطلبات والمخزون بسهولة، بدون تعقيد."
           />
         </div>
 
@@ -279,12 +279,17 @@ export function Pricing() {
                           "border-b border-border",
                       )}
                     >
-                      <td className="px-4 py-3 md:px-6 md:py-4 font-semibold text-xs md:text-sm">{feature}</td>
+                      <td className="px-4 py-3 md:px-6 md:py-4 font-semibold text-xs md:text-sm">
+                        {feature}
+                      </td>
 
                       <td className="px-2 py-3 md:px-6 md:py-4 text-center">
                         {standard ? (
                           <span className="mx-auto flex h-6 w-6 md:h-7 md:w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Check className="h-3.5 w-3.5 md:h-4 md:w-4" strokeWidth={3} />
+                            <Check
+                              className="h-3.5 w-3.5 md:h-4 md:w-4"
+                              strokeWidth={3}
+                            />
                           </span>
                         ) : (
                           <X className="mx-auto h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground/40" />
@@ -294,7 +299,10 @@ export function Pricing() {
                       <td className="px-2 py-3 md:px-6 md:py-4 text-center">
                         {premium ? (
                           <span className="mx-auto flex h-6 w-6 md:h-7 md:w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Check className="h-3.5 w-3.5 md:h-4 md:w-4" strokeWidth={3} />
+                            <Check
+                              className="h-3.5 w-3.5 md:h-4 md:w-4"
+                              strokeWidth={3}
+                            />
                           </span>
                         ) : (
                           <X className="mx-auto h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground/40" />

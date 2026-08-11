@@ -25,12 +25,11 @@ export function HardwareSection() {
     <section id="hardware" aria-label="مواصفات الأجهزة" className="bg-muted/40 py-20">
       <Container>
         <SectionHeading
-          eyebrow="التوافق"
           title="يعمل بدون إنترنت على أجهزتك الحالية"
           description="بدون اشتراكات أو خوادم — ثبّت النظام على أي جهاز الآن."
         />
 
-        <div className="mb-8 flex justify-center gap-3">
+        <div className="mb-12 flex justify-center gap-3">
           {OS.map((os) => (
             <span
               key={os}
@@ -42,19 +41,18 @@ export function HardwareSection() {
           ))}
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {HARDWARE.map((h) => {
             const Icon = h.icon;
             return (
-              <div
-                key={h.title}
-                className="rounded-2xl border border-border bg-card p-6 text-center shadow-sm"
-              >
-                <span className="mx-auto mb-3 inline-flex rounded-xl border border-primary/20 bg-primary/10 p-3">
-                  <Icon className="h-6 w-6 text-primary" />
+              <div key={h.title} className="flex flex-col items-center text-center gap-3">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="h-6 w-6" />
                 </span>
-                <h3 className="mb-1 text-base font-extrabold">{h.title}</h3>
-                <p className="text-sm text-muted-foreground">{h.desc}</p>
+                <div>
+                  <h3 className="mb-1 text-base font-extrabold">{h.title}</h3>
+                  <p className="text-sm text-muted-foreground">{h.desc}</p>
+                </div>
               </div>
             );
           })}

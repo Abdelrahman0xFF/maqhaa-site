@@ -6,14 +6,14 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    default: "Maqhaa | نظام كاشير وإدارة المقاهي بدون اشتراك",
+    default: "Maqhaa | نظام كاشير وادارة المقاهي بدون اشتراك",
     template: "%s | مقهي",
   },
   description:
-    "Maqhaa هو نظام كاشير وإدارة مقاهي سريع وبسيط يعمل دون إنترنت. أدر المبيعات والطاولات والمخزون والورديات والتقارير بسهولة.",
+    "Maqhaa هو نظام كاشير وادارة مقاهي سريع وبسيط يعمل دون إنترنت. أدر المبيعات والطاولات والمخزون والورديات والتقارير بسهولة.",
   openGraph: {
-    title: "Maqhaa - نظام كاشير وإدارة المقاهي",
-    description: "نظام كاشير وإدارة مقاهي بدون اشتراكات، يعمل بدون إنترنت.",
+    title: "Maqhaa - نظام كاشير وادارة المقاهي",
+    description: "نظام كاشير وادارة مقاهي بدون اشتراكات، يعمل بدون إنترنت.",
     url: "https://maqhaa.abdelrahmanashraf.dev",
     siteName: "Maqhaa",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -22,9 +22,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maqhaa - نظام كاشير وإدارة المقاهي",
+    title: "Maqhaa - نظام كاشير وادارة المقاهي",
     description:
-      "نظام كاشير وإدارة مقاهي بدون اشتراكات، يدعم العمل بدون إنترنت.",
+      "نظام كاشير وادارة مقاهي بدون اشتراكات، يدعم العمل بدون إنترنت.",
     images: ["/og-image.png"],
   },
   icons: { icon: "/icon.png" },

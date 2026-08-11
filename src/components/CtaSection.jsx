@@ -29,10 +29,10 @@ export function CtaSection() {
 
           <div className="relative">
             <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
-              نظام شامل لإدارة الكافيه
+              نظام شامل لادارة الكافيه
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-              احصل على نظام الكافيه كامل بلا اشتراكات، يدعم الطباعة وإدارة
+              احصل على نظام الكافيه كامل بلا اشتراكات، يدعم الطباعة وادارة
               المخزون. اختر الباقة الآن.
             </p>
             <button
