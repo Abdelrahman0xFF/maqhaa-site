@@ -560,30 +560,32 @@ export function InteractiveDemo() {
         />
 
         {/* Real-app navigation bar */}
-        <div className="mb-6 flex flex-wrap justify-center gap-2">
-          {[
-            { id: "home", label: "الرئيسية", icon: Armchair },
-            { id: "menu", label: "الكاشير", icon: LayoutGrid },
-            { id: "receipt", label: "الفاتورة الحرارية", icon: ReceiptText },
-            { id: "zreport", label: "تقرير الوردية", icon: FileBarChart },
-          ].map((t) => {
-            const Icon = t.icon;
-            return (
-              <button
-                key={t.id}
-                onClick={() => setView(t.id)}
-                className={cn(
-                  "inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-colors",
-                  view === t.id
-                    ? "bg-primary text-primary-foreground shadow-sm shadow-primary/20"
-                    : "border border-border bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                )}
-              >
-                <Icon className="h-4 w-4" />
-                {t.label}
-              </button>
-            );
-          })}
+        <div className="mb-6 -mx-4 px-4 sm:mx-0 sm:px-0 flex overflow-x-auto pb-2 hide-scrollbar">
+          <div className="flex gap-2 mx-auto sm:mx-0 w-max shrink-0">
+            {[
+              { id: "home", label: "الرئيسية", icon: Armchair },
+              { id: "menu", label: "الكاشير", icon: LayoutGrid },
+              { id: "receipt", label: "الفاتورة الحرارية", icon: ReceiptText },
+              { id: "zreport", label: "تقرير الوردية", icon: FileBarChart },
+            ].map((t) => {
+              const Icon = t.icon;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => setView(t.id)}
+                  className={cn(
+                    "inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-bold transition-colors whitespace-nowrap",
+                    view === t.id
+                      ? "bg-primary text-primary-foreground shadow-sm shadow-primary/20"
+                      : "border border-border bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                  )}
+                >
+                  <Icon className="h-4 w-4 shrink-0" />
+                  {t.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Receipt / Z-report preview */}
@@ -598,7 +600,7 @@ export function InteractiveDemo() {
             <div className="border-b border-border px-5 py-4 shrink-0">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold text-foreground">
-                  اختر طاولة أو طلب سريع
+                  اختر طاولة
                 </h2>
                 <button
                   onClick={() => {
@@ -608,7 +610,7 @@ export function InteractiveDemo() {
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-bold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all active:scale-95"
                 >
                   <ShoppingBag className="w-5 h-5" />
-                  طلب سريع
+                  تيك اواي
                 </button>
               </div>
             </div>

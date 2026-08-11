@@ -252,18 +252,18 @@ export function Pricing() {
 
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-160 text-sm">
+              <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-border bg-muted/50">
-                    <th className="px-6 py-5 text-start font-extrabold">
+                    <th className="px-4 py-4 md:px-6 md:py-5 text-start font-extrabold text-xs md:text-sm">
                       الميزة
                     </th>
 
-                    <th className="px-6 py-5 text-center font-extrabold">
+                    <th className="px-2 py-4 md:px-6 md:py-5 text-center font-extrabold text-xs md:text-sm">
                       الأساسية
                     </th>
 
-                    <th className="px-6 py-5 text-center font-extrabold text-primary">
+                    <th className="px-2 py-4 md:px-6 md:py-5 text-center font-extrabold text-primary text-xs md:text-sm">
                       المتكاملة
                     </th>
                   </tr>
@@ -279,25 +279,25 @@ export function Pricing() {
                           "border-b border-border",
                       )}
                     >
-                      <td className="px-6 py-4 font-semibold">{feature}</td>
+                      <td className="px-4 py-3 md:px-6 md:py-4 font-semibold text-xs md:text-sm">{feature}</td>
 
-                      <td className="px-6 py-4 text-center">
+                      <td className="px-2 py-3 md:px-6 md:py-4 text-center">
                         {standard ? (
-                          <span className="mx-auto flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Check className="h-4 w-4" strokeWidth={3} />
+                          <span className="mx-auto flex h-6 w-6 md:h-7 md:w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <Check className="h-3.5 w-3.5 md:h-4 md:w-4" strokeWidth={3} />
                           </span>
                         ) : (
-                          <X className="mx-auto h-4 w-4 text-muted-foreground/40" />
+                          <X className="mx-auto h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground/40" />
                         )}
                       </td>
 
-                      <td className="px-6 py-4 text-center">
+                      <td className="px-2 py-3 md:px-6 md:py-4 text-center">
                         {premium ? (
-                          <span className="mx-auto flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Check className="h-4 w-4" strokeWidth={3} />
+                          <span className="mx-auto flex h-6 w-6 md:h-7 md:w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <Check className="h-3.5 w-3.5 md:h-4 md:w-4" strokeWidth={3} />
                           </span>
                         ) : (
-                          <X className="mx-auto h-4 w-4 text-muted-foreground/40" />
+                          <X className="mx-auto h-3.5 w-3.5 md:h-4 md:w-4 text-muted-foreground/40" />
                         )}
                       </td>
                     </tr>

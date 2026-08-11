@@ -5,10 +5,9 @@ import { X, MessageCircle, Package, User, Phone, MapPin } from "lucide-react";
 
 const PACKAGES = {
   standard: "الباقة الأساسية",
-  premium: "الـ باقة الكاملة",
+  premium: "الباقة الكاملة",
 };
 
-// ⚠️ استبدل برقم الواتساب الخاص بك بصيغة دولية بدون + أو أصفار البداية
 const WHATSAPP_NUMBER = "201123593773";
 
 export function OrderModal({ pkg, onClose }) {
@@ -16,10 +15,6 @@ export function OrderModal({ pkg, onClose }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
-
-  useEffect(() => {
-    if (pkg) setPackageName(pkg);
-  }, [pkg]);
 
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
@@ -70,7 +65,7 @@ export function OrderModal({ pkg, onClose }) {
               className="rounded-lg border border-input bg-background px-3 py-2.5 font-medium focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="standard">الباقة الأساسية</option>
-              <option value="premium">الـ باقة الكاملة</option>
+              <option value="premium">الباقة الكاملة</option>
             </select>
           </label>
 
